@@ -36,6 +36,8 @@ body{
     font-weight: 600;
 }
 
+/*  4 Answer buttons styling */
+
 .btn {
     background: #fff;
     color:#222;
@@ -47,10 +49,34 @@ body{
     text-align: left;
     border-radius: 4px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s; /* Speed of the over transition - how long it takes to hover */
 }
 
 .btn:hover{
     background: #222;
     color: #fff;
+}
+
+#next-btn {
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#back-btn {
+    background: #c6a10a;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px  115px;
+    border-radius: 4px;
+    cursor: pointer;
 }
