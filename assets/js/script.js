@@ -81,6 +81,14 @@ function selectAnswer(e) {
     } else {
         selectedBtn.classList.add('incorrect');
     }
+    Array.from(answerButtons.children).forEach(button => {
+        if(button.dataset.correct === 'true') {
+            button.classList.add('correct');
+        }
+        button.disabled = true // this stops a button being clicked when answer is selected
+    });
+    nextButton.style.display = 'inline-block'
+    backButton.style.display = 'inline-block' // inline block helps align the buttons on one line
 }
 
 startQuiz();
