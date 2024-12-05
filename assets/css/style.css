@@ -58,6 +58,7 @@ body{
 }
 
 #next-btn {
+    
     background: #001e4d;
     color: #fff;
     font-weight: 500;
@@ -65,8 +66,10 @@ body{
     border: 0;
     padding: 10px;
     margin: 20px auto 0;
+    margin-left: 235px;
     border-radius: 4px;
     cursor: pointer;
+    display: none;
 }
 
 #back-btn {
@@ -76,7 +79,9 @@ body{
     width: 150px;
     border: 0;
     padding: 10px;
-    margin: 20px  115px;
+    margin: 20px auto 0;
     border-radius: 4px;
     cursor: pointer;
+    display: none;
+    /* display: block; centers a button*/
 }
