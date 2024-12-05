@@ -45,7 +45,10 @@ function startQuiz() { // when quiz is stated it resets to 0
     showQuestion();
 }
 
+
+
 function showQuestion() {
+    resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex +1;
     questionElement.innerHTML = questionNo + '. ' + currentQuestion.question;
@@ -55,7 +58,29 @@ function showQuestion() {
         button.innerHTML = answer.text;
         button.classList.add('btn');
         answerButtons.appendChild(button);
+        if (answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener('click', selectAnswer);
     })
+}
+
+function resetState(){ // removes the placeholder answers and fills with the answers we chose
+    nextButton.style.display = 'none';
+    backButton.style.display = 'none';
+    while(answerButtons.firstChild){
+        answerButtons.removeChild(answerButtons.firstChild)
+    }
+}
+
+function selectAnswer(e) {
+    const selectedBtn = e.target
+    const isCorrect = selectedBtn.dataset.correct === 'true';
+    if(isCorrect){
+        selectedBtn.classList.add('correct');
+    } else {
+        selectedBtn.classList.add('incorrect');
+    }
 }
 
 startQuiz();
