@@ -85,3 +85,13 @@ body{
     display: none;
     /* display: block; centers a button*/
 }
+
+
+/* This highlights the answer backgrounds based on if answer is correct or incorrect */
+.correct {
+background: #9aeabc;
+}
+
+.incorrect{
+background: #ff9393;
+}
