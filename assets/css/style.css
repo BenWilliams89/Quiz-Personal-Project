@@ -52,9 +52,13 @@ body{
     transition: all 0.3s; /* Speed of the over transition - how long it takes to hover */
 }
 
-.btn:hover{
+.btn:hover.btn:hover:not([disabled]){ /* :not([disabled]) stops the hover once clicked */
     background: #222;
     color: #fff;
+}
+
+.btn:disabled{
+    cursor: no-drop; /* cursor becomes red indictcting you can no longer select an option/answer */
 }
 
 #next-btn {
@@ -95,3 +99,4 @@ background: #9aeabc;
 .incorrect{
 background: #ff9393;
 }
+
